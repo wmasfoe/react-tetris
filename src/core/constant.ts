@@ -1,0 +1,1 @@
+export const TITLE: string = 'T E T R I S'
