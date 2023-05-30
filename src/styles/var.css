@@ -1,0 +1,9 @@
+:root {
+  --main-bg-color: rgb(0, 150, 136);
+  --game-wrap-bg-color: rgb(239, 204, 25);
+  --black: #000;
+  --button-color: rgb(90, 101, 241);
+  --block-disable: #879372;
+  --game-content-bg: #9ead86;
+  --block-gap: 22px;
+}
