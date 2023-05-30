@@ -1,0 +1,38 @@
+// 设备像素
+$deviceMap: (
+  "phone": (
+    320px,
+    480px,
+  ),
+  "pad": (
+    481px,
+    768px,
+  ),
+  "small-book": (
+    769px,
+    2014px,
+  ),
+  "large-book": (
+    1025px,
+    1200px,
+  ),
+  "large": 1201px,
+);
+
+@mixin use-media-query($device) {
+  $map-val: map-get($deviceMap, $device);
+  $max: 0px;
+  $min: 0px;
+  @if type-of($map-val) == number {
+    $max: $map-val;
+    @media (min-width: $max) {
+      @content;
+    }
+  } @else {
+    $min: nth($map-val, 1);
+    $max: nth($map-val, 2);
+    @media (max-width: $max) and (min-width: $min) {
+      @content;
+    }
+  }
+}
