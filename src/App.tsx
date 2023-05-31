@@ -14,14 +14,16 @@ function App() {
   }, [])
   
   return (
-    <div className={styles.container}>
-      <GameWrapper display={
-        <Display />
-      }>
-        <Operate />
-      </GameWrapper>
-      <Author />
-    </div>
+    // <div className={styles.container}>
+    //   <GameWrapper display={
+    //     <Display />
+    //   }>
+    //     <Operate />
+    //   </GameWrapper>
+    //   <Author />
+    // </div>
+
+    <Operate />
   );
 }
 
